@@ -1,6 +1,7 @@
 local lasttime=rtctime.get()
 local currtime=lasttime
 local intv=node.random(15,30)
+_G.lastid=0
 
 worker=tmr.create()
 worker:register(1000, tmr.ALARM_AUTO , function(t)

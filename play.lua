@@ -1,5 +1,9 @@
 local pcmname={"clockring.u8","catmeow.u8","buzzer.u8","hammer.u8","magic.u8","catmeow2.u8"}
-local pcmfile=node.random(1,6)
+local pcmfile
+repeat
+  pcmfile=node.random(1,6)
+until _G.lastid~=pcmfile
+_G.lastid=pcmfile
 
 local function cb_drained()
   print("drained "..node.heap())

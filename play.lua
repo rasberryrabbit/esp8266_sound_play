@@ -1,7 +1,7 @@
-local pcmname={"clockring.u8","catmeow.u8","buzzer.u8","hammer.u8","magic.u8","catmeow2.u8"}
+local pcmname={"clockring.u8","buzzer.u8","magic.u8","hammer.u8"}
 local pcmfile
 repeat
-  pcmfile=node.random(1,6)
+  pcmfile=node.random(1,4)
 until _G.lastid~=pcmfile
 _G.lastid=pcmfile
 

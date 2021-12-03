@@ -1,6 +1,6 @@
 local lasttime=rtctime.get()
 local currtime=lasttime
-local intv=node.random(15,30)
+local intv=node.random(60,180)
 _G.lastid=0
 
 worker=tmr.create()
@@ -8,7 +8,7 @@ worker:register(1000, tmr.ALARM_AUTO , function(t)
     local currtime=rtctime.get()
     if currtime-lasttime>=intv then
       lasttime=currtime
-      intv=node.random(15,30)
+      intv=node.random(60,180)
       print(intv)
       dofile("play.lua")
     end

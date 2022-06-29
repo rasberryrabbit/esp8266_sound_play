@@ -58,7 +58,7 @@ conntmr:register(2000,tmr.ALARM_AUTO,function()
           aptry=nil
           wifi.sta.disconnect()
           wifi.setmode(wifi.STATIONAP)
-          wifi.ap.config({ssid="Weather_"..node.chipid(), auth=wifi.OPEN})
+          wifi.ap.config({ssid="espsound_"..node.chipid(), auth=wifi.OPEN})
           enduser_setup.manual(true)
           enduser_setup.start(
             function()
